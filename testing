@@ -1,0 +1,21 @@
+import pytest
+from calculator import Сalculator
+
+cal = Сalculator()
+
+def test_addition():
+    assert cal.add(3, 7) == 10
+
+def test_subtraction():
+    assert cal.subtract(8, 10) == -2
+
+def test_multiplication():
+    assert cal.multiply(6, 4) == 24
+
+def test_division():
+    assert cal.divide(8, 2) == 4
+    assert cal.divide(3, 0) == "Error: division by zero"
+
+def test_exponentiation():
+    assert cal.exponentiation(5, 5) == 3125
+    assert cal.exponentiation(0, -2) == "Error: 0 cannot be raised to a negative power"
